@@ -14,7 +14,7 @@ import lombok.ToString;
 @Entity
 @Table(name="user_info")
 @NamedQueries({
-	
+
 	@NamedQuery(
 			name = "User_Info.findByu_no",
 			query = "select u from User_Info u where u.u_no = :u_no "),
@@ -40,11 +40,11 @@ public class User_Info {
 	   @Column(insertable = false)
 	   private String gender;
 	   @Column(insertable = false)
+	   private String email;
+	   @Column(insertable = false)
 	   private String address;
 	   @Column(insertable = false)
 	   private String mobile_number;
-	   @Column(insertable = false)
-	   private String birth_day;
 	   @Column(insertable = false)
 	   private String hire_date;
 	   @Column(insertable = false)
@@ -54,5 +54,5 @@ public class User_Info {
 	   @Column(insertable = false)
 	   private String upd_user;
 
-	
+
 }
