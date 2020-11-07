@@ -14,36 +14,37 @@ import com.kimschool.manage.service.RegUserService;
  */
 @Controller
 public class RegUserController {
-	
+
 	@Autowired
 	RegUserService regUserService;
 
 	private static final Logger logger = LoggerFactory.getLogger(RegUserController.class);
 
-	@RequestMapping("/movereguser")
-	public String muvereguser() {
-		
+	//회원등록페이지 이동처리
+	@RequestMapping("/moveReguser")
+	public String init() {
+
 		logger.info("회원가입 화면 이동처리");
-		
+
 		return "reguser";
 	}
-	
+
 	@RequestMapping("/reguser")
-	public ModelAndView reguser(String id, String password, String email1, String email2) {
+	public ModelAndView reguser(String u_no, String u_password, String name, Integer gender,String email,String address,String mobile_number,String hire_date) {
 		logger.info("회원가입 정보입력 처리");
 		//회원가입 성공시 -> home.jsp ->msg회원가입 완료
 		//회원가입 실패시 redirect-> reguser.jsp ->msg내용을 확인해주세요?
 		ModelAndView mv = new ModelAndView();
-		int result = regUserService.insertUserInfo(id, password, email1, email2);
-		
-		if(result == 0 ) {
+		int result = regUserService.insertUserInfo(u_no, u_password, name, gender,email,address,mobile_number,hire_date);
+
+		if(result == 1 ) {
 			mv.setViewName("home");
 			mv.addObject("회원가입이 완료되었습니다.");
 		} else {
-			mv.setViewName("redirect:/movereguser");
+			mv.setViewName("redirect:/moveReguser");
 		}
-		
-		
+
+
 		return mv;
 	}
 }

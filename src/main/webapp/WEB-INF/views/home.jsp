@@ -32,10 +32,10 @@
 
    	<div id="head2" style="height: 100px; width: 100%; text-align: right; ">
    	<span>근태관리 웹 사이트</span><br>
-           <a class="btn" href="movelogin">로그인</a><br>
+           <a class="btn" href="moveLogin">로그인</a><br>
            <!-- <a href="wbslogoutcheck">로그아웃</a><br> -->
-           <a class="btn" href="movereguser">회원가입</a><br>
-           <a class="btn" href="movewbs">나의근태관리</a><br>
+           <a class="btn" href="moveReguser">회원가입</a><br>
+           <a class="btn" href="moveWbs">나의근태관리</a><br>
    	<hr>
    	</div>
 		흠..웹 담당하실분?

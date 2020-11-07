@@ -36,11 +36,10 @@
 				사원번호 : <br>
 				<input type="text" name="u_no" maxlength="9"><br>
 				패스워드 :<br>
-				<input type="password" name="u_password" maxlength="10"><br>
+				<input type="password" name="u_password" maxlength="20"><br>
 				<input type="submit" value="로그인"><br>
 			</form>
 		<input type="button" value="메인페이지로 돌아가기" onclick="location.href='/manage'"><br>
-		<a class="btn" href="movehome">아이디 또는 비밀번호를 잊어버렸을 경우</a><br>
 	</div>
 </body>
 </html>

@@ -21,14 +21,12 @@ public class HomeController {
 
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 
-
+	//메인페이지
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public ModelAndView home() {
 		ModelAndView mv = new ModelAndView("home");
 		logger.debug("초기처리");
 		return mv;
 	}
-
-
 
 }

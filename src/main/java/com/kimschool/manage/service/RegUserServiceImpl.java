@@ -4,25 +4,31 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.kimschool.manage.dao.RegUserDao;
+import com.kimschool.manage.entity.User_Info;
 
 @Service
 public class RegUserServiceImpl implements RegUserService {
 
 	@Autowired
 	RegUserDao regUserDao;
-	
+
 	@Override
-	public int insertUserInfo(String id, String password, String email1, String email2) {
-		
-/*		User_Info userInfo = new User_Info();
-		userInfo.setId(id);
-		userInfo.setPassword(password);
-		String email = email1 + "@" + email2;
+	public int insertUserInfo(String u_no, String u_password, String name, Integer gender,String email,String address,String mobile_number,String hire_date) {
+
+		User_Info userInfo = new User_Info();
+
+		userInfo.setU_no(u_no);
+		userInfo.setU_password(u_password);
+		userInfo.setName(name);
+		userInfo.setGender(gender);
 		userInfo.setEmail(email);
-		
+		userInfo.setAddress(address);
+		userInfo.setMobile_number(mobile_number);
+		userInfo.setHire_date(hire_date);
+
 		int result = regUserDao.insertUserInfo(userInfo);
-		*/
-		return 0;
+
+		return result;
 	}
 
 }
