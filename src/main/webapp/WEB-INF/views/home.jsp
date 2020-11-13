@@ -3,10 +3,6 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 <html>
 <head>
-    <!-- 부트스트랩 CSS 추가하기 -->
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <!-- 커스텀 CSS 추가하기 -->
-    <link rel="stylesheet" href="./css/custom.css">
 
 	<title>KIMSCHOOL | 팀프로젝트원</title>
 

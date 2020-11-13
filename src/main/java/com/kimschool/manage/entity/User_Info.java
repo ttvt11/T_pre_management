@@ -2,7 +2,6 @@ package com.kimschool.manage.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
@@ -31,27 +30,21 @@ import lombok.ToString;
 public class User_Info {
 
 	   @Id //pk에 지정해주는 어노테이션
-	   @GeneratedValue
 	   private String u_no;
-	   @Column(insertable = false)
 	   private String u_password;
-	   @Column(insertable = false)
 	   private String name;
+	   private int gender;
+	   private String email;
+	   private String address;
+	   private String mobile_number;
+	   private String hire_date;
 	   //inset시 값이 들어가는걸 방지한다(null)
 	   @Column(insertable = false)
-	   private int gender;
-	   @Column(insertable = false)
-	   private String email;
-	   @Column(insertable = false)
-	   private String address;
-	   @Column(insertable = false)
-	   private String mobile_number;
-	   @Column(insertable = false)
-	   private String hire_date;
-	   @Column(insertable = false)
 	   private String reg_date;
+	   //inset시 값이 들어가는걸 방지한다(null)
 	   @Column(insertable = false)
 	   private String upd_date;
+	   //inset시 값이 들어가는걸 방지한다(null)
 	   @Column(insertable = false)
 	   private String upd_user;
 

@@ -1,7 +1,6 @@
 package com.kimschool.manage.dao;
 
 import javax.persistence.EntityManager;
-import javax.persistence.EntityTransaction;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -19,19 +18,14 @@ public class RegUserDaoImpl implements RegUserDao{
 	public int insertUserInfo(User_Info userInfo) {
 
 		EntityManager em = conn.getConnection();
-		EntityTransaction ent = em.getTransaction();
+		//EntityTransaction ent = em.getTransaction();
 
 		//트렌젝션 open
-		ent.begin();
-		User_Info userInfo1 = new User_Info();
-
-		userInfo1.getU_no();
-
-		ent.(userInfo1);
+		em.getTransaction().begin();
+		em.persist(userInfo);
 
 		//트렌젝션 close직전 코밋
-		ent.commit();
-
+		em.getTransaction().commit();
 		return 0;
 	}
 
