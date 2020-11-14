@@ -1,5 +1,10 @@
 package com.kimschool.manage;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
 import javax.sql.DataSource;
 
 import org.slf4j.Logger;
@@ -7,6 +12,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class LoginController {
@@ -24,14 +30,12 @@ public class LoginController {
 		return "login";
 	}
 
-	/*@RequestMapping("login")
-			public ModelAndView login() throws ClassNotFoundException, SQLException {
+	@RequestMapping("login")
+			public ModelAndView actionLogin() throws ClassNotFoundException, SQLException {
 
 			Connection conn;
 			PreparedStatement ps;
 			ResultSet rs;
-
-
 			//SQL접속
 			conn = ds.getConnection();
 
@@ -53,5 +57,5 @@ public class LoginController {
 			mv.setViewName("login");
 
 			return mv;
-		}*/
+		}
 }

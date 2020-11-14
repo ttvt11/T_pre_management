@@ -1,8 +1,10 @@
 package com.kimschool.manage.service;
 
+import com.kimschool.manage.entity.User_Info;
+
 //목차
 public interface RegUserService {
 
-	public int insertUserInfo(String u_no, String u_password, String name, Integer gender,String email,String address,String mobile_number,String hire_date);
+	public int insertUserInfo(User_Info userInfo);
 
 }

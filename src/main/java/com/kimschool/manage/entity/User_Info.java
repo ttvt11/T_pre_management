@@ -7,6 +7,8 @@ import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.DynamicInsert;
+
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
@@ -27,6 +29,7 @@ import lombok.ToString;
 @Setter
 @Getter
 @ToString
+@DynamicInsert
 public class User_Info {
 
 	   @Id //pk에 지정해주는 어노테이션
@@ -38,8 +41,8 @@ public class User_Info {
 	   private String address;
 	   private String mobile_number;
 	   private String hire_date;
-	   //inset시 값이 들어가는걸 방지한다(null)
-	   @Column(insertable = false)
+		/*	   //inset시 값이 들어가는걸 방지한다(null)
+			   @Column(insertable = false)*/
 	   private String reg_date;
 	   //inset시 값이 들어가는걸 방지한다(null)
 	   @Column(insertable = false)

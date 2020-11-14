@@ -42,7 +42,7 @@
 				이름 :
 				<input type="text" name="name" required="required" placeholder="성함를 입력해주세요" maxlength="20"><br>
 				성별 :
-				남<input type="radio" name="gender" value="1" checked="checked" >
+				남<input type="radio" name="gender" value="1"  required="required">
 				여<input type="radio" name="gender" value="2" required="required"><br>
 				EMAIl :
 				<input type="email" name="email" placeholder="이메일를 입력해주세요" required="required"><br>
